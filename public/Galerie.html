@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notre agence</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&family=Skranji:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="./Uploader.html" class="logo">NOTRE AGENCE</a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="./index.html">ACCUEIL</a>
+        <a href="./index.html#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="./Galerie.html">GALERIE</a>
+        <a href="./index.html#portfolio">AUTRES SERVICES</a>
+        <a href="./index.html#contact">BESOINS</a>
+        <a href="./index.html#Map" title="Localisez-nous"
+          ><i class="bx bxs-map" style="font-size: 2em"></i>
+        </a>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3
+          style="
+            font-family: 'Skranji', system-ui;
+            font-size: 4rem;
+            margin-bottom: 0.2em;
+            margin-top: 1.5em;
+          ">
+          NOTRE GALERIE !
+        </h3>
+        <h3>Vous verez : <span class="multiple-text"></span></h3>
+        <p style="text-align: justify; font-size: 1.3em; margin-bottom: 2em">
+          Ce site WEB est en vente, si vous le souhaitez; contactez le
+          développeur en cliquant
+          <a href="tel:+243812539000" style="color: yellow">juste ici</a>, vous
+          pourrez négocier sur les modalités d'acquisition. Votre acquisition,
+          notre désir profond !
+        </p>
+        <div class="social-media">
+          <a href="#" class="bx bxl-facebook" title="FACEBOOK"></a>
+          <a href="#" class="bx bxl-twitter" title="TWITTER"></a>
+          <a href="#" class="bx bxl-instagram-alt" title="INSTAGRAM"></a>
+          <a href="#" class="bx bxl-whatsapp" title="WHATSAPP"></a>
+          <a href="#" class="bx bxl-gmail" title="BOITE MAIL"></a>
+        </div>
+        <div id="btn">
+          <a href="./index.html#contact">COMMANDER</a>
+        </div>
+      </div>
+      <div class="home-img">
+        <img src="./Icons/Twitter.png" alt="Photographe-logo" />
+      </div>
+    </section>
+    <section style="background-color: rgb(0, 0, 0)">
+      <h2 style="font-size: 2.5rem; text-align:center; margin-top: -4rem; margin-bottom: 2rem;">GALERIE <span>PHOTO</span></h2>
+      <div class="gallery"></div>
+  </section>
+    <footer>
+      <div class="logo">NOTRE AGENCE</div>
+      <div class="footer-content">
+        <div class="social-media">
+          <a href="#" class="bx bxl-facebook" title="FACEBOOK"></a>
+          <a href="#" class="bx bxl-twitter" title="TWITTER"></a>
+          <a href="#" class="bx bxl-instagram-alt" title="INSTAGRAM"></a>
+          <a href="#" class="bx bxl-whatsapp" title="WHATSAPP"></a>
+          <a href="#" class="bx bxl-gmail" title="BOITE MAIL"></a>
+        </div>
+        <div class="address">
+          <p>123 Avenue *******, Ville de Lubumbashi, RDC</p>
+          <p><a href="tel:+243999168605">Tél : +243999168605</a></p>
+          <p>
+            <a href="mailto:contact@example.com">Email : contact@example.com</a>
+          </p>
+        </div>
+        <div class="copyright">
+          <hr />
+          <p>&copy; 2024 Notre agence. Tous droits réservés.</p>
+          <a href="tel:+243812539000"
+            ><p class="design" title="Appelez le Développeur de ce site">
+              Created by Mister KOLUJ
+            </p></a
+          >
+        </div>
+        <div class="footer-iconTop">
+          <a href="#"
+            ><i class="bx bx-up-arrow-alt" title="ALLER EN HAUT"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Typed js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./Galerie.js" defer></script>
+
+    <div id="dialog" class="dialog" style="display: none">
+      <div class="dialog-content">
+        <span class="close-btn">&times;</span>
+        <p
+          style="
+            color: black;
+            text-transform: uppercase;
+            font-size: 1.4em;
+            font-weight: bold;
+          ">
+          Lisez attentivement le projet !
+        </p>
+      </div>
+    </div>
+    <script>
+      // AFFICHER LE CONTENU DES LIENS HYPERTEXTES
+
+      let liens = document.querySelectorAll(".btn");
+      liens.forEach((lien) => {
+        lien.addEventListener("click", (event) => {
+          event.preventDefault();
+          let cible = lien.getAttribute("data-target");
+          let element = document.getElementById(cible);
+          if (element.style.display === "block") {
+            element.style.display = "none";
+            lien.textContent = "Voir plus";
+          } else {
+            element.style.display = "block";
+            lien.textContent = "Réduire";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
